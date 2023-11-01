@@ -1,1 +1,7 @@
-# js-passwordgen-assignment
+# JS Passwordgen Assignment
+
+## Description
+
+## Screenshot
+
+## Link

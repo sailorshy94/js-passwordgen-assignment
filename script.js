@@ -1,13 +1,17 @@
 // Assignment Code
 // debugger;
-var document = 
+// var document = 
 // var generateBtn = ; 
-// - when ran node script.js ReferenceError: document is not defined???
+// - when ran node script.js ReferenceError: document is not defined??? - there is not a value for #generate! via MDN
+
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // ADD CODE HERE
   var specialChar = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
+  var number = "0123456789"
+  var lowercase = "abcdefghijklmnopqrstuvwxyz"
+  var uppercase = console.log(lowercase.toUpperCase);
 }
 // password length 8-128 characters
 // character types:

@@ -9,8 +9,8 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   // ADD CODE HERE
   var specialChar = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
-  var number = "0123456789"
-  var lowercase = "abcdefghijklmnopqrstuvwxyz"
+  var number = "0123456789";
+  var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = console.log(lowercase.toUpperCase);
 }
 // password length 8-128 characters
@@ -20,10 +20,10 @@ function generatePassword() {
 // numeric
 // and/or special characters
 
-// Write password to the #password input
+// Write password to the #password input - what does this mean????
 function writePassword() {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  var passwordText = document.querySelector("#password"); //,password); ????
 
   passwordText.value = password;
 

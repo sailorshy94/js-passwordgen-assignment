@@ -5,6 +5,10 @@
 // - when ran node script.js ReferenceError: document is not defined???
 var generateBtn = document.querySelector("#generate");
 
+function generatePassword() {
+  // ADD CODE HERE
+}
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();

@@ -6,13 +6,16 @@
 
 var generateBtn = document.querySelector("#generate");
 
+var possible = generatePassword;
+
 function generatePassword() {
   // ADD CODE HERE  
   var specialChar = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
   var number = "0123456789";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
   var uppercase = lowercase.toUpperCase();
-
+  var selectingChoice = true;
+// need to do Housekeeping here
   for (var i = 0; i < specialChar.length; i++){
     console.log(specialChar[i]);
   }
@@ -30,6 +33,9 @@ function generatePassword() {
   }
 
   // return;
+  // while (selectingChoice) {
+  //   var userChoice = prompt("");
+  // }
 }
 
 // password length 8-128 characters
@@ -46,10 +52,20 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var input = prompt("Would you like to include special characters?");
+  var input = prompt("Would you like to include numbers?");
+  var input = prompt("Would you like to include lowercase letters?");
+  var input = prompt("Would you like to include uppercase letters?");
+  var userChoice = true;
+
 
   passwordText.value = password;
 
-}
+  // if (userChoice === true) {
+  //   var random = Math.floor(Math.random() * possible.length);
+  //   password = possible[random];
+  //   console.log(random.specialChar);
+  }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

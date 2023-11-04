@@ -7,13 +7,20 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  // ADD CODE HERE
+  // ADD CODE HERE  
   var specialChar = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
   var number = "0123456789";
   var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var uppercase = console.log(lowercase.toUpperCase);
+  var uppercase = lowercase.toUpperCase();
+
+  for (var i = 0; i < lowercase.length; i++){
+    console.log(lowercase[i]);
+  }
+  return;
 }
+
 // password length 8-128 characters
+// if, else statement?? If passwordLength is between 8 to 128 characters then it will generate a password, else it will not generate a password
 // character types:
 // lowercase
 // uppercase

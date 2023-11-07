@@ -3,8 +3,11 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  // var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var password = "password";
+
+  console.log(password);
 
   passwordText.value = password;
 

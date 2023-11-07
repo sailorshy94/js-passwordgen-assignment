@@ -15,6 +15,11 @@ function writePassword() {
   var uppercaseChar = lowercaseChar.toUpperCase;
   var numeralChar = "123456789";
 
+  var inputLength = 17;
+  var hasSpecialChar = false;
+  var hasLowercaseChar = false;
+  var hasUppercaseChar = false;
+  var hasNumeralChar = false;
   passwordText.value = password;
 
 }

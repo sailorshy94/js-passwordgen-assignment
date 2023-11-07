@@ -24,7 +24,7 @@ function generatePassword() {
 
 console.log(possibleChar);
 return possibleChar;
-
+}
 
 
 

@@ -11,31 +11,53 @@ function generatePassword() {
   var numeralChar = "123456789";
 
   // can I assign inputLength a random value? math.floor for number between 8 and 128?
-  var inputLength = 15;
-  var hasSpecialChar = false;
-  var hasLowercaseChar = false;
-  var hasUppercaseChar = false;
-  var hasNumeralChar = false;
+  // <=128, >=8???
+  var inputLength = 10;
+  var hasSpecialChar = true;
+  var hasLowercaseChar = true;
+  var hasUppercaseChar = true;
+  var hasNumeralChar = true;
 
   // test the application
+  for (var i = 0; i < inputLength; i++){
+    var random = Math.floor(Math.random() * specialChar.length)
+    possibleChar += specialChar[random];
+  }
+
   for (var i = 0; i < inputLength; i++) {
     var random = Math.floor(Math.random() * lowercaseChar.length)
     possibleChar += lowercaseChar[random];
   }
 
+  for (var i = 0; i < inputLength; i++){
+    var random = Math.floor(Math.random() * uppercaseChar.length)
+    possibleChar += uppercaseChar[random];
+  }
+
+  for (var i = 0; i < inputLength; i++){
+    var random = Math.floor(Math.random() * numeralChar.length)
+    possibleChar += numeralChar[random];
+  }
+
   // if statement to check for user not using at least one char type
-  if (!hasSpecialChar && !hasLowercaseChar && !hasUppercaseChar && !hasNumeralChar){
-    alert("User must choose at least one character type.");
+  // if (!hasSpecialChar && !hasLowercaseChar && !hasUppercaseChar && !hasNumeralChar) {
+  //   alert("User must select at least one character type.");
+  //   return;
+  // }
+  if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar){
+    console.log(possibleChar);
+    return possibleChar;
+  } else {
+    alert("User must select at least one character type.");
     return;
   }
+
 
   // if (!inputLength > 128){
   //   alert("User has entered too many characters. Please choose between 8 and 128 characters.")
   //   return;
   // }
-
-  console.log(possibleChar);
-  return possibleChar;
+  // ???????????????
 }
 
 

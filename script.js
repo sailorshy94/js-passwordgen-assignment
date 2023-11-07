@@ -9,6 +9,7 @@ function writePassword() {
   // console.log(password);
 
   // var possibleChar = specialChar, lowercaseChar, uppercaseChar, numeralChar;?
+  // can I come back and consolidate the variables into something more condensed? 
   var possibleChar = "";
   var specialChar = " !'#$%^&*@()_-+=`~{|}/[]<>;:.";
   var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
@@ -20,6 +21,12 @@ function writePassword() {
   var hasLowercaseChar = false;
   var hasUppercaseChar = false;
   var hasNumeralChar = false;
+
+  // test the application
+  for (var i = 0; i < inputLength; i++)
+    var random = Math.floor(Math.random() * specialChar.length)
+    password += specialChar[random]; 
+    
   passwordText.value = password;
 
 }

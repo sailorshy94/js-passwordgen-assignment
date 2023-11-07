@@ -7,23 +7,23 @@ function generatePassword() {
   var possibleChar = "";
   var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:.";
   var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
-  var uppercaseChar = lowercaseChar.toUpperCase;
+  var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numeralChar = "123456789";
 
   var inputLength = 10;
-  var hasSpecialChar = false;
-  var hasLowercaseChar = true;
+  var hasSpecialChar = true;
+  var hasLowercaseChar = false;
   var hasUppercaseChar = false;
   var hasNumeralChar = false;
 
   // test the application
-  for (var i = 0; i < inputLength; i++){
-    var random = Math.floor(Math.random() * lowercaseChar.length)
-  possibleChar += lowercaseChar[random];
-}
+  for (var i = 0; i < inputLength; i++) {
+    var random = Math.floor(Math.random() * specialChar.length)
+    possibleChar += specialChar[random];
+  }
 
-console.log(possibleChar);
-return possibleChar;
+  console.log(possibleChar);
+  return possibleChar;
 }
 
 

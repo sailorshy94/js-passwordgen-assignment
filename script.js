@@ -4,6 +4,7 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   // ADD CODE HERE
   // can I come back and consolidate the variables into something more condensed? 
+  var password = "password";
   // var possibleChar = "";
   // var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:.";
   // var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
@@ -21,8 +22,8 @@ function generatePassword() {
   //   var random = Math.floor(Math.random() * specialChar.length)
   //   password += specialChar[random]; 
   // output of for loop = all the specialChars at one time with [object HTMLTextAreaElement] before it?????  
-  console.log("password");
-  return "password";
+  console.log(password);
+  return password;
 
 }
 

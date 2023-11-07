@@ -11,26 +11,33 @@ var possible = generatePassword;
 function generatePassword() {
   // ADD CODE HERE  
   var specialChar = ["!", "#", "$", "%", "&", "'", "()", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~", "]"];
-  var number = "0123456789";
-  var lowercase = "abcdefghijklmnopqrstuvwxyz";
-  var uppercase = lowercase.toUpperCase();
-  var selectingChoice = true;
-// need to do Housekeeping here
-  for (var i = 0; i < specialChar.length; i++){
-    console.log(specialChar[i]);
-  }
+  var numericChar = "0123456789";
+  var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChar = lowercase.toUpperCase();
+  var possibleChars = "";
 
-  for (var i = 0; i < number.length; i++){
-    console.log(number[i]);
-  }
+  var inputLength = 16;
+  var hasSpecialChar = false;
+  var hasnumericChar = false;
+  var hasLowercaseChar = false;
+  var hasUppercaseChar = false;
+  // var userChoice = true;
+// need to do Housekeeping here?
+  // for (var i = 0; i < specialChar.length; i++){
+  //   console.log(specialChar[i]);
+  // }
 
-  for (var i = 0; i < lowercase.length; i++){
-    console.log(lowercase[i]);
-  }
+  // for (var i = 0; i < numericChar.length; i++){
+  //   console.log(numericChar[i]);
+  // }
 
-  for (var i = 0; i < uppercase.length; i++){
-    console.log(uppercase[i]);
-  }
+  // for (var i = 0; i < lowercase.length; i++){
+  //   console.log(lowercase[i]);
+  // }
+
+  // for (var i = 0; i < uppercase.length; i++){
+  //   console.log(uppercase[i]);
+  // }
 
   // return;
   // while (selectingChoice) {
@@ -52,11 +59,11 @@ function generatePassword() {
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-  var input = prompt("Would you like to include special characters?");
-  var input = prompt("Would you like to include numbers?");
-  var input = prompt("Would you like to include lowercase letters?");
-  var input = prompt("Would you like to include uppercase letters?");
-  var userChoice = true;
+  // var input = prompt("Would you like to include special characters?");
+  // var input = prompt("Would you like to include numbers?");
+  // var input = prompt("Would you like to include lowercase letters?");
+  // var input = prompt("Would you like to include uppercase letters?");
+  // var userChoice = true;
 
 
   passwordText.value = password;

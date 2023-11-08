@@ -12,13 +12,14 @@ function generatePassword() {
 
   // can I assign inputLength a random value? math.floor for number between 8 and 128?
   // <=128, >=8???
+  // current inputLength var is causing 10 of each char to input into window
   var inputLength = 10;
   var hasSpecialChar = true;
   var hasLowercaseChar = true;
   var hasUppercaseChar = true;
   var hasNumeralChar = true;
 
-  // test the application
+//  for loops for each variable, can I combine??
   for (var i = 0; i < inputLength; i++){
     var random = Math.floor(Math.random() * specialChar.length)
     possibleChar += specialChar[random];

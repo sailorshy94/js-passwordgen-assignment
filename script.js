@@ -5,18 +5,21 @@ function generatePassword() {
   // ADD CODE HERE
   // where does the confirm window go?
   var possibleChar = "";
-  var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:."; confirm("Include special characters?");
-  var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"; confirm("Include lowercase characters?");
-  var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; confirm("Include uppercase letters?");
-  var numeralChar = "123456789"; confirm("Include numeric characters?");
+  var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:."; 
+  var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"; 
+  var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; 
+  var numeralChar = "123456789"; 
   var charCombo = specialChar.concat(lowercaseChar, uppercaseChar, numeralChar);
 
   // users need the option to select the character length from between 8 to 128
-  var inputLength = Math.floor((Math.random() * 128) + 8);
-  var hasSpecialChar = true;
-  var hasLowercaseChar = true;
-  var hasUppercaseChar = true;
-  var hasNumeralChar = true;
+  // var inputLength = Math.floor((Math.random() * 128) + 8); - do not need this for acceptance criteria; user must be able to input the length they want
+  // will need parameters for too short vs too long
+  // need to assign the variables here window.confirm & remove the hard coding of everything below
+  var inputLength = window.prompt("Include how many characters (between 8 to 128)?")
+  var hasSpecialChar = window.confirm("Include special characters?");
+  var hasLowercaseChar = window.confirm("Include lowercase characters?");
+  var hasUppercaseChar = window.confirm("Include uppercase letters?");;
+  var hasNumeralChar = confirm("Include numeric characters?");
 
   for (var i = 0; i < inputLength; i++){
     var random = Math.floor(Math.random() * charCombo.length)
@@ -24,14 +27,14 @@ function generatePassword() {
   }
 
   // need to change the way this is set up
-  if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar) {
-    console.log(possibleChar);
-    return possibleChar;
-  } else {
-    alert("User must select at least one character type.");
-    return;
-  }
-}
+//   if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar) {
+//     console.log(possibleChar);
+//     return possibleChar;
+//   } else {
+//     alert("User must select at least one character type.");
+//     return;
+//   }
+// }
 
 // Write password to the #password input
 function writePassword() {

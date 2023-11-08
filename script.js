@@ -27,8 +27,6 @@ function generatePassword() {
   var hasLowercaseChar = window.confirm("Include lowercase characters?");
   var hasUppercaseChar = window.confirm("Include uppercase letters?");
   var hasNumeralChar = window.confirm("Include numeric characters?");
-  
-  console.log(possibleChar.concat(specialChar));
 
   if (hasSpecialChar){
     possibleChar = possibleChar.concat(specialChar);
@@ -51,7 +49,7 @@ function generatePassword() {
   }
 
   if (!hasSpecialChar && !hasLowercaseChar && !hasUppercaseChar && !hasNumeralChar){
-    alert("User must select at least one character type.")
+    alert("User must select at least one character type.");
     return invalidLength;
   }
 

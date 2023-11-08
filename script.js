@@ -9,7 +9,7 @@ function generatePassword() {
   var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"; confirm("Include lowercase characters?");
   var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; confirm("Include uppercase letters?");
   var numeralChar = "123456789"; confirm("Include numeric characters?");
-
+  var charCombo = specialChar.concat(lowercaseChar, uppercaseChar, numeralChar);
   // can I assign inputLength a random value? math.floor for number between 8 and 128?
   // <=128, >=8???
   // current inputLength var is causing 10 of each char to input into window
@@ -19,28 +19,33 @@ function generatePassword() {
   var hasUppercaseChar = true;
   var hasNumeralChar = true;
 
-  //  for loops for each variable, can I combine??
-  for (var i = 0; i < inputLength; i++) {
-    var random = Math.floor(Math.random() * specialChar.length)
-    possibleChar += specialChar[random];
+  for (var i = 0; i < inputLength; i++){
+    var random = Math.floor(Math.random() * charCombo.length)
+    possibleChar += charCombo[random];
   }
-
-  for (var i = 0; i < inputLength; i++) {
-    var random = Math.floor(Math.random() * lowercaseChar.length)
-    possibleChar += lowercaseChar[random];
-  }
-
-  for (var i = 0; i < inputLength; i++) {
-    var random = Math.floor(Math.random() * uppercaseChar.length)
-    possibleChar += uppercaseChar[random];
-  }
-
-  for (var i = 0; i < inputLength; i++) {
-    var random = Math.floor(Math.random() * numeralChar.length)
-    possibleChar += numeralChar[random];
-  }
-
   
+  //  for loops for each variable, can I combine??
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * specialChar.length)
+  //   possibleChar += specialChar[random];
+  // }
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * lowercaseChar.length)
+  //   possibleChar += lowercaseChar[random];
+  // }
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * uppercaseChar.length)
+  //   possibleChar += uppercaseChar[random];
+  // }
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * numeralChar.length)
+  //   possibleChar += numeralChar[random];
+  // }
+
+
 
   if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar) {
     console.log(possibleChar);

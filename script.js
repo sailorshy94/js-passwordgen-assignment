@@ -5,6 +5,7 @@ function generatePassword() {
   // ADD CODE HERE
   // can I come back and consolidate the variables into something more condensed? 
   var possibleChar = "";
+  // var userCharSelect = [specialChar, lowercaseChar, uppercaseChar, numeralChar];
   var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:.";
   var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
   var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -19,33 +20,29 @@ function generatePassword() {
   var hasUppercaseChar = true;
   var hasNumeralChar = true;
 
-//  for loops for each variable, can I combine??
-  for (var i = 0; i < inputLength; i++){
-    var random = Math.floor(Math.random() * specialChar.length)
-    possibleChar += specialChar[random];
-  }
-
-  for (var i = 0; i < inputLength; i++) {
-    var random = Math.floor(Math.random() * lowercaseChar.length)
-    possibleChar += lowercaseChar[random];
-  }
-
-  for (var i = 0; i < inputLength; i++){
-    var random = Math.floor(Math.random() * uppercaseChar.length)
-    possibleChar += uppercaseChar[random];
-  }
-
-  for (var i = 0; i < inputLength; i++){
-    var random = Math.floor(Math.random() * numeralChar.length)
-    possibleChar += numeralChar[random];
-  }
-
-  // if statement to check for user not using at least one char type
-  // if (!hasSpecialChar && !hasLowercaseChar && !hasUppercaseChar && !hasNumeralChar) {
-  //   alert("User must select at least one character type.");
-  //   return;
+  // tried to create an array for the char types and use in for loop, but did not work
+  //  for loops for each variable, can I combine??
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * userCharSelect.length)
+  //   possibleChar += userCharSelect[random];
   // }
-  if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar){
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * lowercaseChar.length)
+  //   possibleChar += lowercaseChar[random];
+  // }
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * uppercaseChar.length)
+  //   possibleChar += uppercaseChar[random];
+  // }
+
+  // for (var i = 0; i < inputLength; i++) {
+  //   var random = Math.floor(Math.random() * numeralChar.length)
+  //   possibleChar += numeralChar[random];
+  // }
+
+  if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar) {
     console.log(possibleChar);
     return possibleChar;
   } else {

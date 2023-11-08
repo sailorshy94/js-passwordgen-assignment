@@ -11,6 +11,7 @@ function generatePassword() {
   var numeralChar = "123456789"; confirm("Include numeric characters?");
   var charCombo = specialChar.concat(lowercaseChar, uppercaseChar, numeralChar);
 
+  // users need the option to select the character length from between 8 to 128
   var inputLength = Math.floor((Math.random() * 128) + 8);
   var hasSpecialChar = true;
   var hasLowercaseChar = true;

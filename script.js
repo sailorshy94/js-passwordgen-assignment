@@ -3,7 +3,7 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   // ADD CODE HERE
-  // can I come back and consolidate the variables into something more condensed? 
+  // where does the confirm window go?
   var possibleChar = "";
   var specialChar = "!'#$%^&*@()_-+=`~{|}/[]<>;:."; confirm("Include special characters?");
   var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"; confirm("Include lowercase characters?");
@@ -21,8 +21,8 @@ function generatePassword() {
     var random = Math.floor(Math.random() * charCombo.length)
     possibleChar += charCombo[random];
   }
-// next git add = 
 
+  // need to change the way this is set up
   if (hasSpecialChar || hasLowercaseChar || hasUppercaseChar || hasNumeralChar) {
     console.log(possibleChar);
     return possibleChar;
@@ -40,5 +40,6 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

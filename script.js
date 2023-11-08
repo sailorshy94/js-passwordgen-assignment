@@ -18,8 +18,8 @@ function generatePassword() {
   var inputLength = window.prompt("Include how many characters (between 8 to 128)?")
   var hasSpecialChar = window.confirm("Include special characters?");
   var hasLowercaseChar = window.confirm("Include lowercase characters?");
-  var hasUppercaseChar = window.confirm("Include uppercase letters?");;
-  var hasNumeralChar = confirm("Include numeric characters?");
+  var hasUppercaseChar = window.confirm("Include uppercase letters?");
+  var hasNumeralChar = window.confirm("Include numeric characters?");
 
   for (var i = 0; i < inputLength; i++){
     var random = Math.floor(Math.random() * charCombo.length)

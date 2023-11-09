@@ -11,7 +11,7 @@ function generatePassword() {
   var numeralChar = "123456789";
 
   var inputLength = window.prompt("Include how many characters (between 8 to 128)?");
-  var invalidLength = "Please try again, insufficient user input.";
+  var invalidLength = "Please refresh page, insufficient user input.";
   
   if (inputLength < 8){
     alert("Please choose a length of at least 8 characters or more.");

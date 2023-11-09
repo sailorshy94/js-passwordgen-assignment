@@ -7,4 +7,4 @@ This assignment was completed in order to test my understanding of how JavaScrip
 [Passwordgen Screenshot](./image/js-passwordgen-url-img.png)
 
 ## Link
-[Passwordgen Live URL](https://sailorshy94.github.io/js-passwordgen-assignment/)
+[!Passwordgen Live URL](https://sailorshy94.github.io/js-passwordgen-assignment/)
